@@ -5,7 +5,7 @@ module Refinery
       yield self.new
     end
 
-    attr_accessor :title, :version, :description, :url, :menu_match, :plugin_activity, :directory, :hide_from_menu, :always_allow_access
+    attr_accessor :title, :version, :description, :url, :menu_match, :plugin_activity, :directory, :hide_from_menu, :always_allow_access, :tooltip
 
     def initialize
       Refinery::Plugins.registered << self # add me to the collection of registered plugins
@@ -41,6 +41,10 @@ module Refinery
 
     def always_allow_access
       @always_allow_access ||= false
+    end
+
+    def tooltip
+      @tooltip ||= self.description ||= nil
     end
 
   end

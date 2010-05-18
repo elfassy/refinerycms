@@ -10,4 +10,5 @@ Refinery::Plugin.register do |plugin|
     :created_image => "page_add.png",
     :updated_image => "page_edit.png"
   }
+  plugin.tooltip = "Add, edit or delete pages on your website. Pages are displayed in a list, just like files on your computer."
 end
